@@ -62,3 +62,10 @@ Dieses Projekt ermöglicht es dir, mit einem ESP32 alle verbundenen Geräte in d
 - `/reboot` → startet den ESP32 neu
 
 Die Baudrate 115200 ist Standard für die Kommunikation mit ESP32/Arduino über den seriellen Monitor.
+
+---
+
+## 📷 Beispiel
+![screen](https://github.com/user-attachments/assets/c43e9c81-54ea-4d66-954d-6caaac7352ae)
+
+
