@@ -23,7 +23,7 @@ Dieses Projekt ermöglicht es dir, mit einem ESP32 alle verbundenen Geräte in d
 1. Schreibe an [@BotFather](https://t.me/botfather)
 2. Sende `/newbot`
 3. Vergib einen Namen und Benutzernamen (endet auf `bot`)
-4. Du bekommst einen Token – diesen im Code einfügen bei `BOT_TOKEN`
+4. Du bekommst einen Token – diesen im Code bei `BOT_TOKEN` → in secrets.h eintragen
 5. Starte den Bot in deinem Telegram-Account und sende `/start`
 
 ### 🆔 Telegram Chat-ID herausfinden
@@ -31,7 +31,7 @@ Dieses Projekt ermöglicht es dir, mit einem ESP32 alle verbundenen Geräte in d
 **Variante 1 (einfacher):**
 1. Öffne [@getidsbot](https://t.me/getidsbot)
 2. Sende `/start`
-3. Notiere dir die angezeigte `Chat-ID`
+3. Notiere dir die angezeigte `Chat-ID` → in secrets.h eintragen 
 
 **Variante 2 (manuell über Telegram API):**
 1. Sende deinem Bot eine Nachricht
@@ -42,7 +42,7 @@ Dieses Projekt ermöglicht es dir, mit einem ESP32 alle verbundenen Geräte in d
 ### 4. FritzBox vorbereiten
 1. Auf der FritzBox einen Benutzer anlegen
 2. "Zugang auch aus dem Heimnetz zulassen"
-3. Benutzername und Passwort im Code einfügen
+3. Benutzername und Passwort → in secrets.h eintragen
 4. IP-Adresse der FritzBox ggf. anpassen (`192.168.178.1`)
 
 ### 5. Projekt kompilieren & hochladen
@@ -52,8 +52,10 @@ Dieses Projekt ermöglicht es dir, mit einem ESP32 alle verbundenen Geräte in d
    - WiFiClientSecure
    - ArduinoJson
    - HTTPClient
+   - MD5Builder
 3. Board: `ESP32 Dev Module` auswählen
-4. Sketch hochladen
+4. Sketch.ino und secrets-h müssen im selben Ordner sein
+5. Sketch hochladen
 
 ### 6. Telegram-Befehle
 - `/status` → zeigt verbundene Geräte an
