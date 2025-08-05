@@ -10,28 +10,51 @@ Dieses Projekt ermöglicht es dir, mit einem ESP32 alle verbundenen Geräte in d
 
 ---
 
-## 🚀 Was du brauchst
+## 🚀 Schnellstart
 
-- 📱 Telegram-Account + Bot (erstelle mit [@BotFather](https://t.me/botfather))
-- 🔌 ESP32 Board
-- 🌐 Zugang zur Fritz!Box (Benutzername + Passwort + lokale IP)
-- 🔐 Arduino IDE + Bibliotheken:
-  - `WiFi.h`
-  - `WiFiClientSecure.h`
-  - `HTTPClient.h`
-  - `ArduinoJson.h`
-  - `MD5Builder.h`
+### 1. Voraussetzungen
+- ESP32 (z. B. ESP32-S3 DevKitC)
+- Arduino IDE installiert
+- WLAN-Zugangsdaten
+- Zugang zur Fritz!Box + Benutzername + Passwort
+- Telegram-Bot & Chat-ID(s)
 
----
+### 2. Telegram-Bot erstellen
+1. Schreibe an [@BotFather](https://t.me/botfather)
+2. Sende `/newbot`
+3. Vergib einen Namen und Benutzernamen (endet auf `bot`)
+4. Du bekommst einen Token – diesen im Code einfügen bei `BOT_TOKEN`
+5. Starte den Bot in deinem Telegram-Account und sende `/start`
 
-## ⚙️ Einrichtung
+### 🆔 Telegram Chat-ID herausfinden
 
-1. 🔌 ESP32 mit WLAN verbinden
-2. ✍️ `ssid`, `password`, `fritz_ip`, `fritz_user`, `fritz_pass`, `BOT_TOKEN`, `CHAT_IDS[]` anpassen
-3. 📤 Hochladen auf ESP32
-4. 📲 Telegram öffnen und deinen Bot verwenden
+**Variante 1 (einfacher):**
+1. Öffne [@getidsbot](https://t.me/getidsbot)
+2. Sende `/start`
+3. Notiere dir die angezeigte `Chat-ID`
 
----
+**Variante 2 (manuell über Telegram API):**
+1. Sende deinem Bot eine Nachricht
+2. Öffne folgenden Link im Browser:  
+   `https://api.telegram.org/bot<dein_bot_token>/getUpdates`
+3. Suche nach `chat.id` im angezeigten Text
 
-## 📷 Beispiel
+### 4. FritzBox vorbereiten
+1. Auf der FritzBox einen Benutzer anlegen
+2. "Zugang auch aus dem Heimnetz zulassen"
+3. Benutzername und Passwort im Code einfügen
+4. IP-Adresse der FritzBox ggf. anpassen (`192.168.178.1`)
 
+### 5. Projekt kompilieren & hochladen
+1. Arduino IDE öffnen
+2. Bibliotheken installieren:
+   - WiFi
+   - WiFiClientSecure
+   - ArduinoJson
+   - HTTPClient
+3. Board: `ESP32 Dev Module` auswählen
+4. Sketch hochladen
+
+### 6. Telegram-Befehle
+- `/status` → zeigt verbundene Geräte an
+- `/reboot` → startet den ESP32 neu
