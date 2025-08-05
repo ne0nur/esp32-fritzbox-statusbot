@@ -65,7 +65,7 @@ Dieses Projekt ermöglicht es dir, mit einem ESP32 alle verbundenen Geräte in d
    - `HTTPClient`
    - `MD5Builder`
 3. Board: `ESP32 Modul` auswählen
-4. Sketch.ino und secrets.h müssen im selben Ordner sein
+4. ❗❗`Sketch.ino` und `secrets.h` müssen im selben Ordner sein❗❗
 5. Sketch hochladen
 
 ### 6. Telegram-Befehle
