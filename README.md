@@ -60,3 +60,5 @@ Dieses Projekt ermöglicht es dir, mit einem ESP32 alle verbundenen Geräte in d
 ### 6. Telegram-Befehle
 - `/status` → zeigt verbundene Geräte an
 - `/reboot` → startet den ESP32 neu
+
+Die Baudrate 115200 ist Standard für die Kommunikation mit ESP32/Arduino über den seriellen Monitor.
