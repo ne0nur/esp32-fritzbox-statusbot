@@ -16,7 +16,7 @@ Dieses Projekt ermöglicht es dir, mit einem ESP32 alle verbundenen Geräte in d
 - ESP32 (z. B. ESP32-S3 DevKitC)
 - Arduino IDE installiert
 - WLAN-Zugangsdaten
-- Zugang zur Fritz!Box + Benutzername + Passwort
+- Zugang zur Fritz!Box + Benutzername + Passwort → in secrets.h eintragen
 - Telegram-Bot & Chat-ID(s)
 
 ### 2. Telegram-Bot erstellen
